@@ -23,7 +23,6 @@ function App() {
         </Routes>
         <Navbar />
       </Router>
-      <h1>helloWorld</h1>
     </>
   );
 }
