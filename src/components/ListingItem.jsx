@@ -38,9 +38,23 @@ function ListingItem({ listing, id }) {
                 ? `${listing.bedrooms} Bedrooms`
                 : "1 Bedroom"}
             </p>
+            <img src={bathtubIcon} alt="bath" />
+            <p className="categoryListingInfoText">
+              {listing.bathrooms > 1
+                ? `${listing.bathrooms} Bathrooms`
+                : "1 Bedroom"}
+            </p>
           </div>
         </div>
       </Link>
+
+      {/* {onDelete && (
+        <deleteIcon
+          className="removeIcon"
+          fill="rgb(231, 71, 60)"
+          onClick={() => onDelete(listing.id, listing.name)}
+        />
+      )} */}
     </li>
   );
 }
