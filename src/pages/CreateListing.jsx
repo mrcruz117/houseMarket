@@ -63,6 +63,7 @@ function CreateListing() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
   };
 
   const onMutate = (e) => {
@@ -81,7 +82,12 @@ function CreateListing() {
         images: e.target.files,
       }));
     }
-
+    if (!e.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.id]: boolean ?? e.target.value,
+      }));
+    }
     //Text/Bool/num
   };
   return (
